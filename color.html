@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+    <div class="picker-container">
+        <div class="picker-header">
+            <span>Color Picker</span>
+            <button class="share-btn">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </div>
+
+        <div class="main-canvas">
+            <div class="color-preview"></div>
+            <div class="color-gradient">
+                <div class="picker-circle"></div>
+            </div>
+        </div>
+
+        <div class="slider-area">
+            <input type="range" min="0" max="360" value="180" class="hue-slider-input">
+        </div>
+        
+        <div class="hex-area">
+            <div class="hex-label">Hex</div>
+            <div class="hex-input-box">
+                <span id="hex-text">#32a854</span>
+                <i class="fa-solid fa-copy" id="copy-btn"></i>
+            </div>
+        </div>
+
+        <div class="format-area">
+            <div class="format-box">
+                <div class="format-title">RGB</div>
+                <div class="format-value">50, 168, 84</div>
+            </div>
+
+            <div class="format-box">
+                <div class="format-title">CMYK</div>
+                <div class="format-value">70%, 0%, 50%, 34%</div>
+            </div>
+
+            <div class="format-box">
+                <div class="format-title">HSV</div>
+                <div class="format-value">137°, 70%, 66%</div>
+            </div>
+
+            <div class="format-box">
+                <div class="format-title">HSL</div>
+                <div class="format-value">137°, 54%, 43%</div>
+            </div>
+        </div>
+    </div> 
+    <div class="share-overlay" id="share-overlay">
+        <div class="share-modal">
+            <div class="share-header-modal">
+                <h3>Share</h3>
+                <i class="fa-solid fa-xmark close-btn" id="close-share-btn"></i>
+            </div>
+
+            <ul class="share-options">
+                <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+                <li><i class="fa-brands fa-whatsapp"></i> WhatsApp</li>
+                <li><i class="fa-brands fa-x-twitter"></i> X</li>
+                <li><i class="fa-solid fa-envelope"></i> Email</li>
+            </ul>
+
+            <div class="copy-link-area">
+                <p>Click to copy link</p>
+                <input type="text" value="https://color-picker-clone.com/share" id="share-link-input" readonly>
+            </div>
+        </div>
+    </div>
+
+    <script src="color.js"></script>
+</body>
+
+</html>
